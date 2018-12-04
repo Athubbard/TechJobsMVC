@@ -24,13 +24,13 @@ namespace TechJobs.Controllers
 
             if (string.IsNullOrEmpty(searchTerm))
             {
-                return View("index");
+                return View("Index");
             }
 
-            if (searchType.Equals("all"))
+            if (searchType == "all")
             {
                 jobs = JobData.FindByValue(searchTerm);
-                return View("Index");
+                
             }
 
             else
